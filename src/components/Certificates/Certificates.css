@@ -1,0 +1,53 @@
+.flip-card {
+  perspective: 1000px;
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.flip-card:hover {
+  transform: scale(1.03); /* Slightly enlarge card on hover */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%; /* let parent decide */
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease; /* Flip transition */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Front (image side) */
+.flip-card-face.front {
+  background: #fff;
+}
+
+/* Back (title side) */
+.flip-card-face.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #e99b63, #656565);
+  color: #fff;
+  text-align: center;
+}
+.cert-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e99b63;
+  margin: 0.5rem auto 1rem auto;
+  border-radius: 2px;
+}

@@ -1,0 +1,170 @@
+.education-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #f0f0f0;
+  position: relative;
+}
+
+/* Heading */
+.education-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.education-container h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e99b63;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Timeline line */
+.education-container::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e99b63;
+  border-radius: 2px;
+}
+
+/* Timeline items */
+.education-container h3,
+.education-container h5,
+.education-container h6 {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.education-container h3::before,
+.education-container h5::before,
+.education-container h6::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: #e99b63;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* Hover effect */
+.education-container h3:hover,
+.education-container h5:hover,
+.education-container h6:hover {
+  color: #e99b63;
+}
+
+/* Font hierarchy */
+.education-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.education-container h5,
+.education-container h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #c0c0c0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 640px) {
+  .education-container::before {
+    left: 15px;
+  }
+
+  .education-container h3,
+  .education-container h5,
+  .education-container h6 {
+    padding-left: 50px;
+  }
+
+  .education-container h3::before,
+  .education-container h5::before,
+  .education-container h6::before {
+    left: 5px;
+  }
+}
+.skills-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.skill-item h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+.sub-degree {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #c0c0c0;
+  margin-left: 60px; /* aligns with timeline markers */
+  margin-bottom: 1rem;
+  font-style: italic; /* looks nice for course/major */
+  position: relative; /* required for the dot */
+}
+
+/* Dot for the sub-degree (CSE) */
+.sub-degree::before {
+  content: '';
+  position: absolute;
+  left: -40px; /* positions dot near the timeline line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: #e99b63;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-logo img {
+  animation: spin 10s linear infinite;
+}

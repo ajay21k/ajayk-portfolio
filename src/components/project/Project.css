@@ -1,0 +1,69 @@
+.projects-page {
+  position: relative;
+  min-height: 100vh;
+  background: #111;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+   /* centers content vertically */
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.floating-icons {
+  display: flex;
+  gap: 80px; /* space between logos */
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.logo {
+  width: 200px;
+  transition: transform 0.2s ease-out;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+  
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.logo.ecom1{
+    width: 120px; 
+  height: auto;
+  object-fit: contain;
+  border-radius: 200px;
+  border-width: 3px;
+  border-color: gold;
+  /*clip-path: inset(10% 10% 10% 10%); /* trims transparent padding */
+}
+.logo.bit{
+  width: 120px;
+}
+.cert-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e99b63;
+  margin: 0.5rem auto 1rem auto;
+  border-radius: 2px;
+}
+.logo.you{
+  width: 140px;
+}
+.logo.net{
+  width: 250px;
+}

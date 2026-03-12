@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import "boxicons/css/boxicons.min.css";
 import { Link, useLocation } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -30,24 +32,36 @@ const Header = () => {
       {/* Desktop nav */}
       <nav className="hidden md:flex items-center space-x-4">
         <Link
+           data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
           to="/education"
           className="text-base tracking-wider transition-colors hover:text-[#e99b63] z-50"
         >
           EDUCATION
         </Link>
         <Link
+           data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
           to="/project"
           className="text-base tracking-wider transition-colors hover:text-[#e99b63] z-50"
         >
           PROJECTS
         </Link>
         <Link
+           data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="2000"
           to="/certificates"
           className="text-base tracking-wider transition-colors hover:text-[#e99b63] z-50"
         >
           CERTIFICATION
         </Link>
         <Link
+           data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="2500"
           to="/ach"
           className="text-base tracking-wider transition-colors hover:text-[#e99b63] z-50"
         >
@@ -82,21 +96,10 @@ const Header = () => {
         } fixed top-16 bottom-0 right-0 left-0 p-5 md:hidden z-40 bg-black bg-opacity-70 backdrop-blur-md`}
       >
         <nav className="flex flex-col gap-6 items-center">
+    
+         
           <Link
-            to="/certificates"
-            onClick={() => setMobileOpen(false)}
-            className="text-base tracking-wider hover:text-[#e99b63]"
-          >
-            CERTIFICATION
-          </Link>
-          <Link
-            to="/ach"
-            onClick={() => setMobileOpen(false)}
-            className="text-base tracking-wider hover:text-[#e99b63]"
-          >
-            ACHIEVEMENTS
-          </Link>
-          <Link
+          
             to="/education"
             onClick={() => setMobileOpen(false)}
             className="text-base tracking-wider hover:text-[#e99b63]"
@@ -109,6 +112,20 @@ const Header = () => {
             className="text-base tracking-wider hover:text-[#e99b63]"
           >
             PROJECTS
+          </Link>
+                <Link
+            to="/certificates"
+            onClick={() => setMobileOpen(false)}
+            className="text-base tracking-wider hover:text-[#e99b63]"
+          >
+            CERTIFICATION
+          </Link>
+           <Link
+            to="/ach"
+            onClick={() => setMobileOpen(false)}
+            className="text-base tracking-wider hover:text-[#e99b63]"
+          >
+            ACHIEVEMENTS
           </Link>
         </nav>
       </div>

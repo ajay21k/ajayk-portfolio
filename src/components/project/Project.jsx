@@ -25,7 +25,7 @@ const Project = () => {
   data-aos-duration="3000"
   className="cert-title text-center text-3xl font-bold mb-8 mt-10"
 >
-  My Certifications
+  My Projects
 </h2>
 
 
